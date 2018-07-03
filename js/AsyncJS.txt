@@ -1,0 +1,53 @@
+--> Javascript codes run on a single thread i.e can do 1 thing at a time
+
+--> Synchronous code waits for 1 action to complete before moving on to next.
+
+
+	```
+		var test = readSync(file_loc);
+		console.log(test);
+		var test2 = readSync(file_loc2);
+		console.log(test2);
+
+after log of test then the other statement will fire which is not at all good
+
+	Async tasks
+			readAsync(file_loc,()=>{
+			console.log(test);	
+			});
+
+			readAsync(file_loc2,()=>{
+			console.log(test2);	
+			});
+
+
+-->Async Flow Control
+1-->callbacks - good
+2-->Promises - better
+3-->Generators - awesome
+
+
+
+AJAX Requests :-
+--> Communicate with server by making http request
+-->No need to reload the page
+
+Stands for Asynchronous javascript and XML
+
+-->Promise is an object which showes a particular task has been completed or not
+
+A promise is an object that may produce a single value some time in the future: either a resolved value, or a reason
+ that it’s not resolved (e.g., a network error occurred). A promise may be in one of 3 possible states: fulfilled,
+ rejected, or pending. Promise users can attach callbacks to handle the fulfilled value or the reason for rejection.
+
+
+ -->Promise is better than simple call back as we can directly use return statement and pass new promise directly
+    it makes code more readable and understandable and easy to execute
+
+
+-->Generators are also a way of performing async tasks in this we make genrators and it is not simply called as it returns iterator
+while calling and that iterator can be combine with next() for performing task. yiled key word is used for making a pause in the
+code and make async according to our need.
+
+
+		
