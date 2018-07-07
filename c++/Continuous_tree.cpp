@@ -1,3 +1,5 @@
+/* https://www.geeksforgeeks.org/continuous-tree/ */
+
 #include <iostream>
 #include<cstdlib>
 using namespace std;
