@@ -1,6 +1,6 @@
 window.onload = function() {
 
-    $.get("test.json", function (data) {
+    $.get("zap.json", function (data) {
         console.log(data);
     });
 

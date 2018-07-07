@@ -2,6 +2,8 @@
 
 --> Synchronous code waits for 1 action to complete before moving on to next.
 
+js we write work on one thread but the requests are handled on other thread outside the js
+
 
 	```
 		var test = readSync(file_loc);
