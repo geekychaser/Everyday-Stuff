@@ -13,12 +13,12 @@ _this is italic_
 1. this is number list
 - [] this is checkbox   
 
- ![alt etxt](images/Async.png "asynchronous js")
+ ![alt etxt](images/asyncJS/Async.png "asynchronous js")
 
 [Zap](http://zapcircle.net) 
  
 
-[![alt txt](images/callbackhell.png)](http://zapcircle.net)
+[![alt txt](images/asyncJS/callbackhell.png)](http://zapcircle.net)
 
 This is image as link click it to got zapcircle website.
 

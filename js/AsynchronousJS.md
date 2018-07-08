@@ -1,4 +1,4 @@
-![JS logo](images/js.png)
+![JS logo](images/asyncJS/js.png)
 
 Javascript code runs on a single thread and hence should be synchronous 
 in nature. synchronous code waits for one action to complete before moving
@@ -28,6 +28,10 @@ readAsync(file_loc,(test)=>{
 In this case file1 and file2 both are fetched parallely and file which is 
 fetched first is being logged first this becomes non-blocking code and takes
 lesser time to execute.
+
+<div class="row">
+        <img class="responsive-img col s12" src="/images/asyncJS/async.jpeg">
+    </div>
 
 
 
@@ -63,7 +67,7 @@ Fetching data from a json file using AJAX request:
 **output**
 
 
-![alt etxt](images/Async.png "asynchronous js")
+![alt etxt](images/asyncJS/Async.png "asynchronous js")
 
 Here `later` is printed first while the data is being fetched from json file and 
 as soon as the data is fetched then the callback function is fired and data
@@ -142,7 +146,7 @@ See the pyramid shape and all the `})` at the end? Eek! This is
  
 **Output**
 
-![callbackhell](images/callbackhell.png)
+![callbackhell](images/asyncJS/callbackhell.png)
 
 Callback hell can be resolved by **Modularizing** our code and handling
 every single error.
@@ -194,6 +198,56 @@ declared outside which keeps the code tidy and readable.
 Output remains the same :relieved:
 
 ###Promises
+Promise is an object which showes a particular task has been completed 
+or not(i.e. state of a particular task).  
+ A promise may be in one of 3 possible states:
+ * Fulfilled: the operation completed successfully.
+ * Rejected: the operation failed.
+ * Pending: initial state, neither fulfilled nor rejected.  
+ 
+ Promise users can attach callbacks to handle the fulfilled value or
+  the reason for rejection.  
+  Promise is better than simple call back as we can directly use return 
+  statement and pass new promise directly, it makes code more readable
+   and understandable and easy to execute.
+   
+   ![chart](images/asyncJS/promises.png)
+  
+  Let us consider an example to understand better that how it is better
+  than normal callbacks.  
+  ```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promises</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        window.onload = function(){
+
+            $.get("zap.json").then(function (value) {
+                console.log(value);
+                return  $.get("test.json");
+            }).then(function (value) {
+                console.log(value);
+                return  $.get("test2.json")
+            }).then(function (value) {
+                console.log(value);
+
+            })
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+```
+*output* remains the same  
+![promises output](images/asyncJS/callbackhell.png)  
+function in `.then` is called when the data is retrieved and we can return 
+new promise, hence it makes our code readable and output remains the same.
+ 
 
 
 

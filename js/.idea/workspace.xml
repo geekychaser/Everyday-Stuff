@@ -27,8 +27,8 @@
       <file leaf-file-name="AsyncJS.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AsyncJS.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+            <state relative-caret-position="666">
+              <caret line="46" column="70" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="46" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -38,15 +38,23 @@
         <entry file="file://$PROJECT_DIR$/AsynchronousJS.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="185">
-                <caret line="195" column="11" lean-forward="false" selection-start-line="195" selection-start-column="11" selection-end-line="195" selection-end-column="11" />
+              <first_editor relative-caret-position="144">
+                <caret line="32" column="57" lean-forward="false" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
                 <folding>
-                  <marker date="1530904448934" expanded="true" signature="1354:1727" ph="..." />
-                  <marker date="1530904448934" expanded="true" signature="1361:1703" ph="..." />
-                  <marker date="1530904448934" expanded="true" signature="1498:1695" ph="..." />
-                  <marker date="1530904448934" expanded="true" signature="1535:1681" ph="{...}" />
-                  <marker date="1530904448934" expanded="true" signature="1584:1634" ph="{...}" />
-                  <marker date="1530904448934" expanded="true" signature="1710:1719" ph="..." />
+                  <marker date="1531077037565" expanded="true" signature="1455:1828" ph="..." />
+                  <marker date="1531077037565" expanded="true" signature="1462:1804" ph="..." />
+                  <marker date="1531077037565" expanded="true" signature="1599:1796" ph="..." />
+                  <marker date="1531077037565" expanded="true" signature="1636:1782" ph="{...}" />
+                  <marker date="1531077037565" expanded="true" signature="1685:1735" ph="{...}" />
+                  <marker date="1531077037565" expanded="true" signature="1811:1820" ph="..." />
+                  <marker date="1531077037565" expanded="true" signature="6031:6616" ph="..." />
+                  <marker date="1531077037565" expanded="true" signature="6038:6592" ph="..." />
+                  <marker date="1531077037565" expanded="true" signature="6179:6584" ph="..." />
+                  <marker date="1531077037565" expanded="true" signature="6215:6571" ph="{...}" />
+                  <marker date="1531077037565" expanded="true" signature="6270:6365" ph="{...}" />
+                  <marker date="1531077037565" expanded="true" signature="6389:6484" ph="{...}" />
+                  <marker date="1531077037565" expanded="true" signature="6508:6560" ph="{...}" />
+                  <marker date="1531077037565" expanded="true" signature="6599:6608" ph="..." />
                 </folding>
               </first_editor>
               <second_editor />
@@ -67,8 +75,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="38" column="7" lean-forward="false" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+            <state relative-caret-position="486">
+              <caret line="27" column="43" lean-forward="true" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -104,8 +112,8 @@
       <file leaf-file-name="promise.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/promise.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="15" column="1" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -188,6 +196,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -209,8 +219,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -265,11 +273,12 @@
       <workItem from="1530858075769" duration="4724000" />
       <workItem from="1530879170214" duration="12465000" />
       <workItem from="1530948043281" duration="1807000" />
+      <workItem from="1531073718867" duration="2890000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34787000" />
+    <option name="totallyTimeSpent" value="37677000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-11" width="1922" height="1092" extended-state="6" />
@@ -518,17 +527,17 @@
     <entry file="file://$PROJECT_DIR$/zap.json" />
     <entry file="file://$PROJECT_DIR$/test2.json" />
     <entry file="file://$PROJECT_DIR$/test.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -540,31 +549,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/promise.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/Async.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/AsyncJS.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="2" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="38" column="7" lean-forward="false" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -577,11 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/callbackhell.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/callback.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -590,42 +573,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/promise.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AsyncJS.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        <state relative-caret-position="666">
+          <caret line="46" column="70" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="46" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/Async.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/callbackhell.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="43" lean-forward="true" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AsynchronousJS.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="144">
+            <caret line="32" column="57" lean-forward="false" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
+            <folding>
+              <marker date="1531077037565" expanded="true" signature="1455:1828" ph="..." />
+              <marker date="1531077037565" expanded="true" signature="1462:1804" ph="..." />
+              <marker date="1531077037565" expanded="true" signature="1599:1796" ph="..." />
+              <marker date="1531077037565" expanded="true" signature="1636:1782" ph="{...}" />
+              <marker date="1531077037565" expanded="true" signature="1685:1735" ph="{...}" />
+              <marker date="1531077037565" expanded="true" signature="1811:1820" ph="..." />
+              <marker date="1531077037565" expanded="true" signature="6031:6616" ph="..." />
+              <marker date="1531077037565" expanded="true" signature="6038:6592" ph="..." />
+              <marker date="1531077037565" expanded="true" signature="6179:6584" ph="..." />
+              <marker date="1531077037565" expanded="true" signature="6215:6571" ph="{...}" />
+              <marker date="1531077037565" expanded="true" signature="6270:6365" ph="{...}" />
+              <marker date="1531077037565" expanded="true" signature="6389:6484" ph="{...}" />
+              <marker date="1531077037565" expanded="true" signature="6508:6560" ph="{...}" />
+              <marker date="1531077037565" expanded="true" signature="6599:6608" ph="..." />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1530904448934" expanded="true" signature="1354:1727" ph="..." />
-            <marker date="1530904448934" expanded="true" signature="1361:1703" ph="..." />
-            <marker date="1530904448934" expanded="true" signature="1498:1695" ph="..." />
-            <marker date="1530904448934" expanded="true" signature="1535:1681" ph="{...}" />
-            <marker date="1530904448934" expanded="true" signature="1584:1634" ph="{...}" />
-            <marker date="1530904448934" expanded="true" signature="1710:1719" ph="..." />
+            <marker date="1531077037565" expanded="true" signature="1455:1828" ph="..." />
+            <marker date="1531077037565" expanded="true" signature="1462:1804" ph="..." />
+            <marker date="1531077037565" expanded="true" signature="1599:1796" ph="..." />
+            <marker date="1531077037565" expanded="true" signature="1636:1782" ph="{...}" />
+            <marker date="1531077037565" expanded="true" signature="1685:1735" ph="{...}" />
+            <marker date="1531077037565" expanded="true" signature="1811:1820" ph="..." />
+            <marker date="1531077037565" expanded="true" signature="6031:6616" ph="..." />
+            <marker date="1531077037565" expanded="true" signature="6038:6592" ph="..." />
+            <marker date="1531077037565" expanded="true" signature="6179:6584" ph="..." />
+            <marker date="1531077037565" expanded="true" signature="6215:6571" ph="{...}" />
+            <marker date="1531077037565" expanded="true" signature="6270:6365" ph="{...}" />
+            <marker date="1531077037565" expanded="true" signature="6389:6484" ph="{...}" />
+            <marker date="1531077037565" expanded="true" signature="6508:6560" ph="{...}" />
+            <marker date="1531077037565" expanded="true" signature="6599:6608" ph="..." />
           </folding>
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="185">
-            <caret line="195" column="11" lean-forward="false" selection-start-line="195" selection-start-column="11" selection-end-line="195" selection-end-column="11" />
-            <folding>
-              <marker date="1530904448934" expanded="true" signature="1354:1727" ph="..." />
-              <marker date="1530904448934" expanded="true" signature="1361:1703" ph="..." />
-              <marker date="1530904448934" expanded="true" signature="1498:1695" ph="..." />
-              <marker date="1530904448934" expanded="true" signature="1535:1681" ph="{...}" />
-              <marker date="1530904448934" expanded="true" signature="1584:1634" ph="{...}" />
-              <marker date="1530904448934" expanded="true" signature="1710:1719" ph="..." />
-            </folding>
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>

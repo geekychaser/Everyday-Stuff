@@ -23,14 +23,19 @@
     <title>Ajax</title>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script>
-        window.onload = function() {
+        window.onload = function(){
 
-            $.get("zap.json", function (data) {
-                console.log(data);
-            });
+            $.get("zap.json").then(function (value) {
+                console.log(value);
+                return  $.get("test.json");
+            }).then(function (value) {
+                console.log(value);
+                return  $.get("test2.json")
+            }).then(function (value) {
+                console.log(value);
 
-            console.log("later");
-        };
+            })
+        }
     </script>
 </head>
 <body>
