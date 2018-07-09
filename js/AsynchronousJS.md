@@ -5,7 +5,7 @@ in nature. synchronous code waits for one action to complete before moving
  on to next task. But even after JS is considered as single threaded 
  we are able to perform tasks parallely **HOW?**  
 
-```angular2html
+```ecmascript 6
 var test = readSync(file_loc);
 		console.log(test);
 		var test2 = readSync(file_loc2);
@@ -16,7 +16,7 @@ next file is fetched and logged. What if the file1 is huge file and lets say
 take **10sec** to be fetched then this become blocking i/o and decreases UX.  
  So to get rid of this situation we can do same task **asynchronously** 
  
- ```angular2html
+ ```ecmascript 6
 readAsync(file_loc,(test)=>{
 			console.log(test);	
 			});
@@ -36,11 +36,12 @@ lesser time to execute.
 
 
 ##What is Asynchronous JavaScript?
-Asynchronous JS basically means, codes which starts now, and finishes 
+> Asynchronous JS basically means, codes which starts now, and finishes 
 at a later point in time and can perform any other task simultaneously 
 in the time.
+
 Fetching data from a json file using AJAX request:
-```angular2html
+```html
 
 <!DOCTYPE html>
 <html lang="en">
@@ -96,7 +97,7 @@ inside the otherFunction. A callback function is essentially a pattern,
   and therefore, the use of a callback function is also known as a 
   callback pattern.  
   Callback implemented using jQuery
-  ```angular2html
+  ```ecmascript 6
 window.onload = function() {
 
     $.ajax({
@@ -137,7 +138,7 @@ window.onload = function() {
     })
 };
 ```
-Here function inside a function is being called only if the previous
+> Here function inside a function is being called only if the previous
  function executes without any error this is called **callback functions**. 
 See the pyramid shape and all the `})` at the end? Eek! This is 
  affectionately known as **callback hell**. :fearful:
@@ -151,7 +152,7 @@ See the pyramid shape and all the `})` at the end? Eek! This is
 Callback hell can be resolved by **Modularizing** our code and handling
 every single error.
 Above code be rewritten by resolving callback hell as:
-```angular2html
+```ecmascript 6
 window.onload = function() {
 
     function checkerror(err) {
@@ -198,8 +199,9 @@ declared outside which keeps the code tidy and readable.
 Output remains the same :relieved:
 
 ###Promises
-Promise is an object which showes a particular task has been completed 
+> Promise is an object which showes a particular task has been completed 
 or not(i.e. state of a particular task).  
+
  A promise may be in one of 3 possible states:
  * Fulfilled: the operation completed successfully.
  * Rejected: the operation failed.
@@ -247,34 +249,85 @@ or not(i.e. state of a particular task).
 ![promises output](images/asyncJS/callbackhell.png)  
 function in `.then` is called when the data is retrieved and we can return 
 new promise, hence it makes our code readable and output remains the same.
+
+![promise hell](images/asyncJS/promise_hell.jpg)
+
+##Generators
+ > Generators provide a powerful alternative: they allow you to 
+ define an iterative algorithm by writing a single function which 
+ can maintain its own state.  
+ 
+ ![generators](images/asyncJS/gene.png)  
+ generators are special type of functions which is used to perform
+ async tasks. It is defined as `function*(){..}` on calling similarly
+ as functions it returns an **iterator**. In JavaScript an iterator is
+  an object that provides a next() method which returns the next item 
+  in the sequence.   
+  Let us consider an example :
+  ```ecmascript 6
+window.onload = function () {
+
+   generator(function*(){
+        var zap = yield $.get("zap.json");
+        console.log(zap);
+   });
+
+    console.log("done");
+
+    function generator(temp) {
+
+        var gen = temp();
+
+        function checkandprint(output){
+            if(!output.done) {
+                output.value.then(function (data) {
+                    return checkandprint(gen.next(data));
+                });
+            }
+        }
+
+            return checkandprint(gen.next());
+    }
+};
+```
+here `next()` returns the value of *`done`* as true or false  and iterator is
+terminated when *`done`* is *false*.  
+The `next()` method also accepts a value which can be used to modify the
+ internal state of the generator. A value passed to `next()` will be 
+ treated as the result of the last **`yield`** expression that paused the 
+ generator.This pause help us make user-defined iterables.  
+ 
+ ![async/await](images/asyncJS/pro+gene.png)
+ 
+ There is no opposition between these two techniques. They coexist 
+ together complementing each other nicely. Promises resolves the 
+ callback hell problem but even in promises there are callbacks and
+ if the code is huge it becomes difficult to debug an issue. So we want 
+ to write *asynchronous* code in *synchronous* manner, Here comes the 
+ **generators** which gives us power to write asynchronous code which
+ seems to synchronous using promises, this combined concept is called 
+ **Async/Await**  
+ 
+ ##What is the best way among all?
+ 
+ ![thinking](images/asyncJS/thinking.png)
+ 
+ Now this totally depends on use case. Different methods have different
+ advantages and disadvantages.  
+ Callbacks is the fastest solution possible at this time
+  (performance of native promises are not soo good). Promises with 
+  generators give you opportunity to write asynchronous code in
+   synchronous fashion. But for now they much slower then simple
+    callbacks.
+    
+    
+    
+ 
+ 
+ 
  
 
 
-
-
-
-
-[Zap](http://zapcircle.net) 
- 
-
-
-
-This is image as link click it to got zapcircle website.
-
-[alt txt](https://youtu.be/GaT8uMDtEZo)
-Don't know how to add vedio 
-
-col1 | col2 | col3
------:|:------|:-----:
-xt1 | txt2 | txt3 
-acb|
-
-
-
-`<this is inline code>`jbfkjbkfbwejkbfkw
-```
-this is big block of code 
-```
 
 
 
