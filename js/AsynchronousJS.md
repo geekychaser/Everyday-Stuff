@@ -1,3 +1,11 @@
+---
+title: "Asynchronous JS"
+date: 2018-07-09T01:37:59+05:30
+draft: false
+author: "Rishabh Kr Bothra"
+cover_image: /images/asyncJS/js.png
+---
+
 ![JS logo](images/asyncJS/js.png)
 
 Javascript code runs on a single thread and hence should be synchronous 
@@ -319,6 +327,15 @@ The `next()` method also accepts a value which can be used to modify the
   generators give you opportunity to write asynchronous code in
    synchronous fashion. But for now they much slower then simple
     callbacks.
+    
+   
+   
+   ###Further Readings
+  >[Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)  
+   
+   >[Callbacks](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function)  
+   
+   >[Generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
     
     
     
