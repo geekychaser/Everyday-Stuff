@@ -1,10 +1,3 @@
----
-title: "Asynchronous JS"
-date: 2018-07-09T01:37:59+05:30
-draft: false
-author: "Rishabh Kr Bothra"
-cover_image: /images/asyncJS/js.png
----
 
 ![JS logo](images/asyncJS/js.png)
 
