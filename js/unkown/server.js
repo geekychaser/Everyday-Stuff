@@ -2,11 +2,18 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var mongoClient = require('mongodb').MongoClient;
 var mongoose = require('mongoose');
+var session = require('express-session');
 var app = express();
 
 app.set('view engine','ejs');
 //app.set('views', path.join(__dirname, 'views'));
 app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(session({
+    secret: "budhi bhai",
+    resave: true,
+    saveUninitialized: false
+}));
 
 const uri = "mongodb+srv://Budhiraja:9811809871@cluster0-apyn6.mongodb.net/test?retryWrites=true"
 
