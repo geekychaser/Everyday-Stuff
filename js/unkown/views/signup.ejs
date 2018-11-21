@@ -5,11 +5,30 @@
         <title>Signup</title>
     </head>
     <body>
+
         <form method="POST" action="/signup">
+          
             <div class="form-group">
                 <label>Username</label>
                 <input type="text" name="name" class="form-control" placeholder="Enter Username">
                 <small class="form-text text-muted">Choose unique name</small>
+            </div>
+            <div class="form-group">
+                <label>Age</label>
+                <input type="number" name="age" class="form-control" placeholder="Enter age">
+            </div>
+            <div class="form-group">
+                <label>Adhaar number</label>
+                <input type="number" name="adhaar" class="form-control" placeholder="Enter adhaar no.">
+                <small class="form-text text-muted">We'll never share your adhaar no. with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label>Marital status</label>
+               <select class="from-control" name="marital">
+                   <option>Single</option>
+                   <option>Married</option>
+               </select>
+                <small class="form-text text-muted">Don't worry we are not sending you marriage proposals</small>
             </div>
             <div class="form-group">
                 <label>Email address</label>
@@ -19,6 +38,7 @@
             <div class="form-group">
                 <label>Password</label>
                 <input type="password" name="password" class="form-control" placeholder="Enter password">
+                <small class="form-text text-muted">Don't use password of your bank account, we don't spend much on our security</small>
 
             </div>
             <button type="submit" class="btn btn-primary">Register</button>
