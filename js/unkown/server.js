@@ -18,13 +18,13 @@ app.use(expressValidator());
 
 var dburl = "mongodb://localhost:27017/budhi";
 mongoose.Promise = global.Promise;
-mongoose.connect(dburl);
+mongoose.connect(dburl,{ useNewUrlParser: true });
 
-// app.use(session({
-//     secret: "budhi bhai",
-//     resave: true,
-//     saveUninitialized: false
-// }));
+app.use(session({
+    secret: "budhi bhai",
+    resave: true,
+    saveUninitialized: false
+}));
 
 // const uri = "mongodb+srv://Budhiraja:9811809871@cluster0-apyn6.mongodb.net/test?retryWrites=true"
 
@@ -38,43 +38,89 @@ mongoose.connect(dburl);
 // })
 
 app.get('/',(req,res)=>{
-    //res.send("started again");
-    res.render('home');
-})
+    User.findById(req.session.userId)
+    .exec(function (error, user) {
+      if (error) {
+        return next(error);
+      } else {
+        if (user === null) {
+         return res.redirect('/signup');
+        } else {
+          return res.send('<h1>Name: </h1>' + user.name + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/logout">Logout</a>')
+        }
+      }
+    });
+});
 
 app.get('/signup',(req,res)=>{
     res.render('signup');
 })
 
-app.post('/signup',(req,res)=>{
-    // console.log(req.body);
-    // console.log(req.body.email);
-    // console.log(req.body.password);
-    // req.checkBody('name', 'Name is required').notEmpty();
-    // req.checkBody('email', 'Email is required').notEmpty();
-    // req.checkBody('email', 'Please enter a valid email').isEmail();
-    // req.checkBody('password','Please enter password').notEmpty();
+app.post('/signup',(req,res,next)=>{
 
+   
+    var myData ={
+        name:req.body.name,
+        age:req.body.age,
+        adhaar:req.body.adhaar,
+        marital:req.body.marital,
+        email:req.body.email,
+        password:req.body.password,
+    }
 
-    var myData = new User(req.body);
-    console.log("this is fucking password " + myData.password);
-    myData.password =  bcrypt.hashSync(myData.password,8);
-    console.log("this is fucking hash " + myData.password);
-    myData.save().then(()=>{
-        res.redirect('/');
+    User.create(myData,function(err,user){
+        if(err){
+            return next(err);
+        }
+        else{
+            req.session.userId = user._id;
+            res.redirect('/');
+        }
     })
-    .catch((err)=>{
-        console.log(err);
-        res.send("operation failed try again");
-    });
+
+    // myData.save().then(()=>{
+    //     res.redirect('/');
+    // })
+    // .catch((err)=>{
+    //     console.log(err);
+    //     res.send("operation failed try again");
+    // });
 
     
     
     
+});
+
+
+app.post('/login',(req,res,next)=>{
+    if(req.body.email&&req.body.password){
+        User.authenticate(req.body.email,req.body.password,function(err,user){
+            if(err || !user){
+                var err = new Error('wrong email or password');
+                err.status = 401;
+                return next(err);
+            } else{
+                req.session.userId = user._id;
+                return res.redirect('/');
+            }
+        })
+    }
 })
 
 app.get('/login',(req,res)=>{
     res.render('login');
+})
+
+app.get('/logout',(req,res,next)=>{
+    if(req.session){
+        req.session.destroy(function(err){
+            if(err){
+                return next(err);
+            }else {
+                res.redirect('/login');
+            }
+        })
+    }
 })
 
 app.post('/login',(req,res)=>{
