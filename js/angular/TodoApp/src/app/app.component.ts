@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'TodoApp';
+  title = 'todos';
+  content = '';
+  lists = [];
+
+  getContent(event: any) {
+    this.content = event.target.value;
+  }
+  addToList() {
+    this.lists.push(this.content);
+  }
 }
