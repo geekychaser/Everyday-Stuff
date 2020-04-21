@@ -18,15 +18,23 @@ void start(){
 
 }
 
+char ulta(char s){
+    if(s == '(') return ')';
+    
+    if(s == '{') return '}';
+    
+    if(s == '[') return ']';
+}
+
 
 bool solve(string str,int i,vector<char>s){
 	if(str[i] == '\0' && s.empty()){
-		cout<<i<<endl;
+// 		cout<<i<<endl;
 		return true;
 	}
 
 	if(str[i] == '(' || str[i] == '{' || str[i] == '['){
-		s.push_back(str[i]);
+		s.push_back(ulta(str[i]));
 	}
 
 	else if(str[i] == ')' || str[i] == '}' || str[i] == ']'){
