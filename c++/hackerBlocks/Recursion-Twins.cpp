@@ -25,8 +25,8 @@ void solve(string str,int i){
 
 	if(str[i] == str[i-2] && str[i]!=str[i-1]){
 		ans++;
-		solve(str,i+1);
 	}
+	solve(str,i+1);
 	
 }
 
