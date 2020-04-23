@@ -36,12 +36,12 @@ void solve(int n,int i){
 	}
 
 	for(int j=0;j<n;j++){
-		if(!col[j] && !rd[i+j] && !ld[j-i]){
-			col[j] = rd[i+j] = ld[j-i] = 1;
+		if(!col[j] && !rd[i+j] && !ld[j-i+n-1]){// done n+1  becuase we can not mark negative indexes
+			col[j] = rd[i+j] = ld[j-i+n-1] = 1;
 			sol[i][j] = 1;
 			solve(n,1+i);
 			sol[i][j] = 0;
-			col[j] = rd[i+j] = ld[j-i] = 0;
+			col[j] = rd[i+j] = ld[j-i+n-1] = 0;
 		}
 	}
 }

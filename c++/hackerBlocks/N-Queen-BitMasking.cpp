@@ -1,48 +1,33 @@
-#include<bits/stdc++.h>
-
+#include<iostream>
 using namespace std;
 
-#define int long long
-#define endl "\n"
-#define fastIO ios_base::sync_with_stdio(false); cin.tie(NULL);
-#define MAX 100
-#define DONE (1<<n)-1
+int nqueen(int n, int row, int ld, int rd){
 
-int ans = 0;
+    // hum sirf curretn row  ke bare mein dekhenge ki kha kha queen place kar sakta hai
+    // curretn argument yahi batata hai kissi kiss jagah par queen exist karti hai
+    int done = (1<<n)-1;
+    if(done == row){
+        // got a possible solution
+        return 1;
+    }
 
-void start(){
-	ios_base::sync_with_stdio(false);
-	cin.tie(NULL);
+    int pos = done&(~(row|ld|rd)); // current row mein kitne column mein queen rakh sakta hoo jha jha 1 hai vha queen rakh sakta hoo;
 
-	#ifndef ONLINE_JUDGE
-		freopen("in.txt","r",stdin);
-		freopen("out.txt","w",stdout);
-	#endif
+    int ans = 0;
+    while(pos>0){ // how many possibility to place a queen in a row
+        int p = pos&(-pos); // konsi position par queen place ki hai 
+        pos -= p; // abb kitni possible jagah hai kissi row mein queen place karne ki 
+        ans += nqueen(n, (row|p), (ld|p)<<1, (rd|p)>>1);
+    }
 
+    // (row|p) = phela kha kha kar chuka hai aur abb vala ki position ka sum
+    // (ld|p)<<1 = phela vala diagonal and abb vali queen ka left diagonal
+    // (rd|p)>>1 = phela vala diagonal and abb vali queen ka right diagonal
+    return ans;
 }
-
-
-void NQueen(int col,int ld,int rd,int n){
-	// Base Case
-	if(col == DONE){
-		ans++;
-		return;
-	}
-
-	// Recursive case
-	int RemainingColumns = DONE&(~(col|ld|rd)); // to check how many remaing colmns are left
-
-	while(RemainingColumns>0){
-		int pos = RemainingColumns&(-RemainingColumns); // pick right most bit where we can place the queen 
-		RemainingColumns -= pos;                        // remove the posing where we paces the queen 
-		NQueen(col|pos,(ld|pos)<<1,(rd|pos)>>1,n);		// one left shift to make the left dia gonal block and (||) to make all diagonal block
-	}
-}
-
-int32_t main(){
-	int n;
-	cin>>n;
-
-	NQueen(0,0,0,n);
-	cout<<ans<<endl;
+int main(){
+    int n;
+    cin>>n;
+    cout<<nqueen(n, 0, 0, 0)<<endl;
+    return 0;
 }
