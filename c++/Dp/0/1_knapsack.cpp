@@ -37,6 +37,28 @@ int memoization(int wt[],int val[],int capacity,int n){
     }
 } 
 
+int bottom_up(int wt[],int val[],int capacity,int n){
+
+    for(int i=0;i<n;i++){
+        dp[i][0] = 0;
+        dp[0][i] = 0;
+    }
+
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=capacity;j++){
+
+            if(wt[i-1] <= j){
+                dp[j][i] = max(val[i-1] + dp[j - wt[i-1]][i-1], dp[j][i-1]);
+            }
+            else{
+                dp[j][i] = dp[j][i-1];
+            }
+        }
+    }
+
+    return dp[capacity][n];
+}
+
 
 int32_t main(){
 
@@ -50,9 +72,11 @@ for(int i=0;i<n;i++){
     cin>>wt[i];
     cin>>val[i];
 }
-memset(dp,-1,sizeof(dp));
+// memset(dp,-1,sizeof(dp));
 // cout<<knapsack(wt,val,capacity,n)<<endl;
-cout<<memoization(wt,val,capacity,n)<<endl;
+// cout<<memoization(wt,val,capacity,n)<<endl;
+memset(dp,0,sizeof(dp));
+cout<<bottom_up(wt,val,capacity,n)<<endl;
 
 
 }
