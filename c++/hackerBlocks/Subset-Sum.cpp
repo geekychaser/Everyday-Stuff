@@ -18,42 +18,60 @@ void start(){
 
 }
 
-int counter = 0;
-vector<vector<int>>ans;
-void solve(int n,int m,int i,int j,string ans){
+int ans = 0;
+void solve(int *a,int i,int n,int k,vector<int>v){
+	if(k == 0){
+        for(auto i:v){
+        	cout<<i<<" ";
+        }
+        cout<<" ";
+        ans++;
+        return;
+    }
 
-	if(j == n) return;
+    if(k < 0 || i >= n){
+        return;
+    }
+    
+    
+    	v.push_back(a[i]);
+        solve(a,i+1,n,k-a[i],v);
+        v.pop_back();
+        solve(a,i+1,n,k,v);
+        
 
-	if(sum == target){
-		counter++;
-		ans.push_back(temp);
-		return;
-	}
-
-	for(int i=0;i<n;i++){
-		solve(n,v,temp.push_back(v[i]),sum+v[i]);
-	}
-	
+        
 }
 
 
 
 int32_t main(){
 	fastIO
-	// start();
+	start();
 	int n;
 	cin>>n;
 
-	vector<int>v(n);
+	int a[n];
 
 	for(int i=0;i<n;i++){
-		cin>>v[i];
+		cin>>a[i];
 	}
-
+	// sort(a,a+n);
 	int target;
 	cin>>target;
+	// cout<<"target "<<target<<endl;
+	vector<int>temp;
+	solve(a,0,n,target,temp);
 
-	solve()
+	// for(auto it: ans){
+	// 	for(auto i: it){
+	// 		cout<<i<<" ";
+	// 	}
+	// 	cout<<" ";
+	// }
+
+	cout<<endl<<ans<<endl;
+	
 
 
 }
