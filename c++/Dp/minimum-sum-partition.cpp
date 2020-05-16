@@ -118,7 +118,7 @@ int32_t main(){
 
 		for(int i=0;i<=range;i++){
 			// cout<<"i is "<<i<<" "<<dp[n][i]<<endl;
-			if(dp[n-1][i] == 1){
+			if(dp[n][i] == 1){
 				// cout<<"is is "<<i<<endl;
 				ans = min(ans,abs(range - 2*(i)));
 			}
