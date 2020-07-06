@@ -8,8 +8,20 @@ using namespace std;
 #define ip(a,n) for(int i=0;i<n;i++) cin>>a[i];
 #define op(a,n) for(int i=0;i<n;i++) cout<<a[i]<<" ";
 
+void start(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    #ifndef ONLINE_JUDGE
+        freopen("in.txt","r",stdin);
+        freopen("out.txt","w",stdout);
+    #endif
+
+}
+
 int32_t main(){
-    IOS
+    start();
+    
     string s;
     cin>>s;
 
@@ -23,6 +35,7 @@ int32_t main(){
             v.push_back(i+1);
         }
     }
+
     
     if(v.size() == 0){
         cout<<"0"<<endl;

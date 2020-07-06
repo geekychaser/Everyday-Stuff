@@ -17,29 +17,43 @@ void start(){
 	#endif
 
 }
-int sum = 0;
 
-void solve(int n,int *a,int i,int k){
-	if(i+k >= n){
-		return;
-	}
 
-	int temp = a[i];
-	for(int j=i+1;j<k;j++){
-		temp = temp^a[j];
-		cout<<"temp "<<temp<<endl;
-	}
-	cout<<"temp now when i is "<<i<<" "<<temp<<endl;
-	sum = max(sum,temp);
-
-	solve(n,a,i+1,k);
-}
+int Max_Xor(int arr[], int n, int k) 
+{ 
+  
+    // Initialize result 
+    int maxXor = INT_MIN; 
+  
+    // Traverse all subsets of the array 
+    for (int i = 0; i < (1 << n); i++) { 
+  
+        // __builtin_popcount() returns the number 
+        // of sets bits in an integer 
+        if (__builtin_popcount(i) == k) { 
+  
+            // Initialize current xor as 0 
+            int cur_xor = 0; 
+            for (int j = 0; j < n; j++) { 
+  
+                // If jth bit is set in i then include 
+                // jth element in the current xor 
+                if (i & (1 << j)) 
+                    cur_xor = cur_xor ^ arr[j]; 
+            } 
+  
+            // Update maximum xor so far 
+            maxXor = max(maxXor, cur_xor); 
+        } 
+    } 
+    return maxXor; 
+} 
 
 
 
 int32_t main(){
 	fastIO
-	start();
+	// start();
 
 	int test;
 	cin>>test;
@@ -56,9 +70,7 @@ int32_t main(){
 			cin>>a[i];
 		}
 
-		sum = 0;
-		solve(n,a,0,k);
-		cout<<sum<<endl;
+		cout<<Max_Xor(a,n,k)<<endl;
 	}
 
 	

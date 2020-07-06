@@ -23,7 +23,7 @@ public:
 		for(int it=0;it<v;it++){
 			cout<<it;
 			for(auto i: m[it]){
-				cout<<"->"<<i;
+				cout<<"-> "<<i;
 			}
 			cout<<endl;
 		}

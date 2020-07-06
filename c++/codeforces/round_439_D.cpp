@@ -23,7 +23,7 @@ int32_t main(){
     sort(a,a+n);
     sort(b,b+m,greater<int>());
     int ans = 0;
-    
+
     for(int i=0;i<min(n,m);i++){
         
         if(b[i] > a[i]){
@@ -32,6 +32,5 @@ int32_t main(){
     }
 
     cout<<ans<<endl;
-
 
 }

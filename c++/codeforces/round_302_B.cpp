@@ -35,5 +35,4 @@ int32_t main(){
         cout<<lower_bound(v.begin(),v.end(),moment[i])-v.begin() + 1<<"\n";
     }
 
-
 }

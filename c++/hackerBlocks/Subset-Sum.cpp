@@ -34,7 +34,7 @@ void solve(int *a,int i,int n,int k,vector<int>v){
     }
     
     
-    	v.push_back(a[i]);
+    	v.push_back(a[i]); 
         solve(a,i+1,n,k-a[i],v);
         v.pop_back();
         solve(a,i+1,n,k,v);
