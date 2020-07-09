@@ -1,0 +1,25 @@
+/* pseudo classes - enabled, dsiabled, checked  */
+
+input:enabled{
+    background-color: lightgoldenrodyellow;
+}
+
+input:disabled{
+    background-color: lightgrey;
+}
+
+input[type="radio"]:checked + label{
+    color: blueviolet;
+}
+
+p::first-letter{
+    color:hotpink;
+}
+
+.phone:before{
+    content: '\260E';
+}
+
+.phone::after{
+    content: '\260E';
+}
