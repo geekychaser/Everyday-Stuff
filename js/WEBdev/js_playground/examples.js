@@ -8,3 +8,13 @@ let new_arr = arr.map((item) => {
 })
 
 console.log(new_arr);
+
+
+// we can also access position of particular element in the arr using map 
+
+let pos_arr = arr.map((item,pos) =>{
+    console.log(`pos is ${pos}`);
+    return pos;
+});
+
+console.log(pos_arr);
