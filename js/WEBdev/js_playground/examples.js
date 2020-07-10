@@ -17,4 +17,14 @@ let pos_arr = arr.map((item,pos) =>{
     return pos;
 });
 
-console.log(pos_arr);
+console.log(pos_arr,'\n');
+
+
+// Array method reduce is same as map but the only difference is accumulator in reduce which is passed as callback in function body
+
+let result = arr.reduce((acc,item) =>{
+    console.log(item);
+    return acc + item;
+},0)
+
+console.log(result);
