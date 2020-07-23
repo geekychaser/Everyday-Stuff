@@ -1,7 +1,7 @@
 body {
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+	animation: gradient 5s ease infinite;
 }
 
 @keyframes gradient {
@@ -15,3 +15,53 @@ body {
 		background-position: 0% 50%;
 	}
 }
+
+.card {
+    margin: 10px 10px;
+  }
+  
+  /* Flip Cards CSS */
+  .card-container {
+    display: grid;
+    perspective: 700px;
+  }
+  
+  .card-flip {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    grid-template-areas: "frontAndBack";
+    transform-style: preserve-3d;
+    transition: all 0.7s ease;
+  }
+  
+  .card-flip div {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
+  
+  .front {
+    grid-area: frontAndBack;
+  }
+  
+  .back {
+    grid-area: frontAndBack;
+    transform: rotateY(-180deg);
+  }
+  
+  .card-container:hover .card-flip {
+    transform: rotateY(180deg);
+  }
+
+  .card-title,.btn-primary{
+      margin-left: 10%;
+  }
+
+  .card-text{
+      margin-left:5%
+  }
+
+div{
+    margin:auto;
+}
+
+  
