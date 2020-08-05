@@ -20,7 +20,7 @@ function read2(){
     return new Promise((resolve,reject)=>{
         fs.readFile(F2,(err,data)=>{
             if(err) throw err;
-            data = data.toString().split('\n');
+            data = data.toString().split('\n'); // toString is used to convert the buffer data into string
             resolve(data);
         })
     })
