@@ -3,6 +3,8 @@
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 4px;
+    margin-left:2px;
+    margin-right:2px;
   }
 
   .up {
@@ -22,10 +24,36 @@
   }
 
   #list > :first-child .up{
-    display: none;
+    visibility: hidden;
   }
 
   #list > :last-child .down{
-    display: none;
+    visibility: hidden;
   }
+
+  #btn{
+    background-color: goldenrod;
+    border: none;
+    color: white;
+    padding: 5px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .container{
+  margin-top: 5%;
+  }
+
+  input{
+    width: 200px;
+  }
+
+  .test{
+    margin-left:80%;
+  }
+
 
