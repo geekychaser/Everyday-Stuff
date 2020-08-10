@@ -14,11 +14,11 @@ let todos = ['hello','world'];
 
 //Handlebar helper function to print list
 handlebars.registerHelper("list",function(options){
-    var res = '<ul>';
+    var res = '<ul id="list" class="list-group col-md-6">';
 
     for(let i=0;i<todos.length;i++){
         res = res + `<form action="/del" method="POST"><input name="name" value="${todos[i]}" style="display: none;">`
-        res = res + `<li> ${todos[i]}<button type="submit">del</button></li></form>`;
+        res = res + `<li class="list-group-item"> ${todos[i]}<button type="submit" class="btn btn-danger fas fa-trash float-right"></button></li></form>`;
     }
 
     return res + '</ul>';
