@@ -53,7 +53,7 @@ int Max_Xor(int arr[], int n, int k)
 
 int32_t main(){
 	fastIO
-	// start();
+	start();
 
 	int test;
 	cin>>test;

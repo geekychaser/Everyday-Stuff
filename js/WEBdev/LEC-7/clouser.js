@@ -13,7 +13,7 @@ function test(){
 
         return inner;
     }
-
+    
     return fun;
 }
 
@@ -34,3 +34,5 @@ f5();
 
 // clouser sirf ek hi baar banta for a single call jese yha oe 2 baar f1 caal hua isley 2 baar increment ho gya 
 //kyuki clouser ek hi baar banta hai toh dusri call pe puraani value update ho gyi thi
+
+

@@ -1,6 +1,9 @@
 //util.promisfy we convert our read write functions into promises and apply async await
 // functions which has callback as last argument and callback having argumets as data and error can be converted into promise using above fn
 
+
+//Async await helps us to write asynchronous function in sunchronous manner
+
 const fs = require('fs');
 const path = require('path');
 const util = require('util');
