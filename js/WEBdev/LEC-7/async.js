@@ -9,4 +9,5 @@ let x = setInterval(()=>{ // it runs in every one sec
 
 setTimeout(()=>{
     clearInterval(x);
+    console.log("setTime ot after 3 secs");
 },3000);
