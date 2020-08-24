@@ -1,60 +1,55 @@
-const fs = require('fs')
-const path = require('path')
-const f1 = path.join(__dirname, 'input.txt')
-const f2 = path.join(__dirname, 'input2.txt')
-const f3 = path.join(__dirname, 'output.txt')
+const fs = require('fs');
+const path = require('path');
+const F1 = path.join(__dirname,'inp1.txt');
+const F2 = path.join(__dirname,'inp2.txt');
+const F3 = path.join(__dirname,'output.txt');
 
-function readf1() {
-    return new Promise((resolve, reject) => {
-        fs.readFile(f1,
-            // data,
-            (err,data) => {
-                if (err) throw err
-                data = data.toString().split('/n')
-                resolve(data)
-            })
+function read(filePath){
+    console.log("file path is ",filePath);
+    return new Promise((resolve,reject)=>{
+        fs.readFile(filePath,(err,data)=>{
+            if(err) throw err;
 
+            resolve(data.toString().split(' '));
+        })
     })
 }
 
-function readf2() {
-    return new Promise((resolve, reject) => {
-        fs.readFile(f2,
-            // data,
-            (err,data) => {
-                if (err) throw err
-                data = data.toString().split('/n')
-                resolve(data)
-            }
-        )
-
+function write(data){
+    return new Promise((resolve,reject)=>{
+        fs.writeFile(F3,data,(err)=>{
+            if(err) throw err;
+            resolve();
+        })
     })
 }
 
-function writefileoutput(ans) {
-    return new Promise((resolve, reject) => {
-        fs.readFile(f3,
-            ans,
-            (err) => {
-                if (err) throw err
-                resolve(ans)
-            }
-        )
+const readf1 = read.bind(this);
+const readf2 = read.bind(this);
 
-    })
-}
+let ans;
 
-let ans
-readf1()
-    .then((data) => {
-        ans = data
-        return readf2() //this returns Promise of readfilef2
+readf1(F1)
+    .then((data)=>{
+        ans = data;
+        console.log("data successfully retrieved from file 1");
+        console.log(data);
+        console.log("===============================================================");
+        return readf2(F2);
     })
-    .then((data) => {
-        ans = ans.concat(data)
-        ans.sort((a, b) => a - b)
-        return writefileoutput(ans)
+    .then((data)=>{
+        ans = ans.concat(data);
+        console.log("data successfully retrieved from file 2");
+        console.log(data);
+        ans.sort((a,b)=>a-b);
+        console.log("===============================================================");
+        console.log(ans);
+        console.log("===================================================================");
+        return write(ans.join(' '));
     })
-    .then(() => {
-        console.log('All Done!!')
+    .then(()=>{
+        console.log("data successfully written in file 3");
     })
+
+
+
