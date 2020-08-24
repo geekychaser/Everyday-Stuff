@@ -1,0 +1,30 @@
+Types of Joins 
+
+1. Cross-Join
+    cross multiplication of all the product
+    ex: select* form [master table] as PM ,[display table] as PD
+
+2. Inner-Join
+    Attributes common in both the tables got display
+    ex: select* from [master table] as PM
+        INNER JOIN [display table] as PD where PM.productId = PD.productId
+
+3. Outer-Join
+
+    *Left Outer-Join
+        output the inner join + the left over data in left table(master table) with null value where there is no match
+        ex: select* from [master table] as PM
+        LEFT JOIN [display table] as PD where PM.productId = PD.productId
+
+    *Right Outer-Join
+        output the inner join + the left over data in right table(display table) with null value where there is no match
+        ex: select* from [master table] as PM
+        RIGHT JOIN [display table] as PD where PM.productId = PD.
+        
+    *FULL Outer-Join
+        output the inner join + the left over data in left table(master table) + the left over data in right table(display table)
+         with null value where there is no match
+        ex: select* from [master table] as PM
+        FULL JOIN [display table] as PD where PM.productId = PD.productId
+
+

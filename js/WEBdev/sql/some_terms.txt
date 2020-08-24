@@ -1,0 +1,10 @@
+Normalization - method use to remove duplicate data from relation
+- 1NF (atomic value) eaach col should have unique records
+- 2NF (should be 1NF) non-key atrributes should be completely dependent on primary key else break the table accordingly
+- 3NF (should be 2NF) non-key atrributes should be mutually independent
+
+Relation algebra
+- sigma for selection of rows
+- Pi for selection of columns 
+- X cartesian product all possible combination of two relations
+    * after cartesian product number of rows is n*p and cols are m+q
