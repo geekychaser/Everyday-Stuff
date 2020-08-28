@@ -1,0 +1,2 @@
+synchronous / asynchronous is to describe the relation between two modules.
+blocking / non-blocking is to describe the situation of one module.
