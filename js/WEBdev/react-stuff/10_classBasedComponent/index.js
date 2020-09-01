@@ -70,7 +70,7 @@ class Greeting extends React.Component{
     )
     }
 }
-// function Greeting() {
+// function Greeting() {=7
 //     const date = new Date()
 //     const hours = date.getHours()
 //     let timeOfDay
