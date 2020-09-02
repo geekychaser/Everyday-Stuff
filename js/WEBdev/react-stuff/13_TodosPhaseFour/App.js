@@ -21,12 +21,12 @@ class App extends React.Component {
 
     render(){
 
-        let todos = this.state.todos.map((item)=>{
+        let tasks = this.state.todos.map((item)=>{
             return <TodoItem key= {item.id} task={item} />
         })
         return(
             <div>
-                {todos}
+                {tasks}
             </div>
         )
     }
